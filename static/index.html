@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Search for Professor</h1>
+    <div class="search-container">
+        <input type="text" id="professorName" placeholder="Enter professor's name">
+        <button onclick="searchProfessor()">Search</button>
+    </div>
+
+    <div class="result-container" id="resultContainer" style="display: none;">
+        <h2>Professor Details</h2>
+        <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
