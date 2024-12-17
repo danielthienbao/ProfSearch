@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professor and Class Search</title>
+</head>
+<body>
+    <h1>Search Professors or Classes</h1>
+    <form method="POST" action="/">
+        <label for="search_type">Search By:</label>
+        <select name="search_type" required>
+            <option value="professor">Professor Name</option>
+            <option value="class">Class Name</option>
+        </select><br><br>
+
+        <label for="query">Enter Name or Class Code:</label>
+        <input type="text" name="query" required><br><br>
+
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

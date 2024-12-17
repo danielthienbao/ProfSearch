@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+    {% if results %}
+        {% if search_type == "professor" %}
+            <ul>
+                {% for line in results %}
+                    <li>{{ line }}</li>
+                {% endfor %}
+            </ul>
+        {% elif search_type == "class" %}
+            <table border="1">
+                <tr>
+                    <th>Professor</th>
+                    <th>Course</th>
+                    <th>Method</th>
+                    <th>Success Rate</th>
+                    <th>Completion Rate</th>
+                </tr>
+                {% for row in results %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+
+    <a href="/">Go Back</a>
+</body>
+</html>
